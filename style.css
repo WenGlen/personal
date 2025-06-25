@@ -1,0 +1,15 @@
+.wrap {
+	max-width: 1440;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+.header{
+width: 500px;
+height: 32px;
+background: #eee;
+}
