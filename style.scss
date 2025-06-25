@@ -1,0 +1,160 @@
+// ================ Reset 預設樣式 ================ //
+*{
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+}
+
+
+:root{
+    // ================ color ================ //
+	--color-primary: #007BA7;
+	--color-secondary: #FFBF00;
+	--color-bg: #ffffff;
+	--color-bg2: #f8f2d9;
+	--color-text: #004D99;
+    --color-link: #00CED1;
+	--color-border: #5E86C1;
+	--color-warning: #FF80BF;
+    // ================ RWD ================ //
+    --breakpoint-sm: 600px;
+    --breakpoint-md: 1024px;
+    --breakpoint-lg: 1024px;
+
+}
+
+//*{	border: 1px solid #999999;}
+// ================ main ================ //
+.wrap{
+	max-width: 1000px;
+	margin: 0 auto;
+	border: 1px solid var(--color-border);
+
+}
+
+// ================ header ================ //
+.header{
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.logo{
+		width: 250px;
+		height: 250px;
+		background: var(--color-secondary);
+	}
+	.menu{
+		background: var(--color-bg2);
+		ul {display: flex;	flex-wrap: wrap; list-style: none; padding-left: 0;}
+		ul li {	margin: 16px}
+		ul li a {text-decoration: none; padding: 8px; background: var(--color-text); color: var(--color-bg);}
+		ul li a:hover {font-weight: bold;background: var(--color-link);}
+	}
+  }
+
+// ================ content ================ //
+
+.content{
+	display: flex;
+	.container1{
+		flex: 70%;
+	}
+	.container2{
+		flex: 20%;
+		.pic{
+			max-width: 300px; height: 40px;
+			background: var(--color-primary);
+			margin: 8px;
+		}
+	}
+}	
+
+// ================ footer ================ //
+.footer{
+	background-color: var(--color-bg2);
+
+	p{
+		font-size: 8pt;
+		line-height: 1.5;
+		color: var(--color-text);
+		text-align: center;
+		padding: 8px;
+	}
+
+}
+
+// ================ RWD ================ //
+@media(max-width: 1000px) {
+	.header{
+		justify-content: center;
+		.logo{
+			width: 180px;
+			height: 180px;
+		}
+
+	  }
+	.content{
+		display: flex;
+		flex-direction: column;
+		.container1{
+			flex: 100%;
+		}
+		.container2{
+			flex: 100%;
+			.pic{ margin: 8px auto;}
+		}
+	}	
+}
+@media(max-width: var(--breakpoint-sm)) {
+
+	.card{ width: 100%;	margin-bottom: 20px;}
+
+}
+	
+
+
+
