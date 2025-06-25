@@ -3,13 +3,15 @@
 	margin: 0 auto;
 	border: 1px solid #ddd;
 }
-.logo{
-    width: 100px;
+.header{
+    width: 500px;
     height: 100px;
+    background: #eee;
+    }
+.logo{
+    width: 60px;
+    height: 60px;
     background: pink;
 }
-.header{
-width: 500px;
-height: 32px;
-background: #eee;
-}
+
+ 
